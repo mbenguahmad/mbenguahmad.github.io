@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>AGE UTILISATEUR</title>
+  </head>
+  <body>
+    <script>
+      //affichage d'un msg avec alert
+      let msg = "BIENVENUE(S) SUR NOTRE PROGRAMME DE CALCUL D'AGE";
+      alert(msg);
+
+      //saisie de l'année de naissance avec prompt
+      const anneeMin = 1900;
+      const anneeEnCours = 2021;
+      do {
+        var anneeNaiss = prompt('SAISIR VOTRE ANNEE DE NAISSANCE');
+      } while (
+        anneeNaiss < anneeMin ||
+        anneeNaiss > anneeEnCours ||
+        isNaN(anneeNaiss) == true
+      );
+
+      //determination de l'age
+      let age = anneeEnCours - anneeNaiss;
+
+      //affichage du resultat
+      if (confirm('Voulez-vous afficher le resutat ?')) {
+        msg = 'VOUS ETES AGE DE ' + age + ' AN(S)';
+        alert(msg);
+      } else alert('AFFICHAGE DU RESULTAT ANNULE');
+    </script>
+  </body>
+</html>
